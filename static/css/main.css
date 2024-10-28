@@ -1,0 +1,255 @@
+/* src/css/main.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-blue: #4F46E5;
+    --primary-text: #111827;
+    --secondary-text: #6B7280;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-gray-900 text-white;
+}
+
+/* Header Styles */
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-600;
+}
+
+/* Card Styles */
+.glass-card {
+    @apply bg-gray-800/50 rounded-xl backdrop-blur-lg border border-gray-700/50;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    @apply transform -translate-y-1 shadow-xl shadow-blue-500/10;
+}
+
+/* Technology Tags */
+.tech-tag {
+    @apply px-3 py-1 rounded-full text-sm bg-blue-600/20 text-blue-400;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    @apply bg-blue-600/30;
+}
+
+/* Button Styles */
+.primary-button {
+    @apply px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors text-white font-medium;
+}
+
+.secondary-button {
+    @apply px-8 py-3 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors font-medium;
+}
+
+/* Hero Section */
+.hero-heading {
+    @apply text-5xl md:text-6xl font-bold mb-6;
+}
+
+.hero-subtext {
+    @apply text-xl text-gray-300 mb-8;
+}
+
+/* Stats Section */
+.stat-card {
+    @apply glass-card p-6;
+}
+
+.stat-number {
+    @apply text-2xl font-bold gradient-text mb-2;
+}
+
+.stat-label {
+    @apply text-gray-400;
+}
+
+/* Core Expertise Section */
+.expertise-card {
+    @apply glass-card p-6 space-y-4;
+}
+
+.expertise-title {
+    @apply text-xl font-bold;
+}
+
+.expertise-list {
+    @apply space-y-2 text-gray-300;
+}
+
+/* Contact Section */
+.contact-card {
+    @apply glass-card p-6 hover:bg-gray-700/50 transition-colors text-center cursor-pointer;
+}
+
+.contact-icon {
+    @apply text-blue-500 text-4xl mb-4;
+}
+
+/* Technology Stack */
+.stack-section {
+    @apply py-20;
+}
+
+.stack-card {
+    @apply glass-card p-6;
+}
+
+.stack-title {
+    @apply text-xl font-bold mb-4;
+}
+
+.stack-tags {
+    @apply flex flex-wrap gap-2;
+}
+
+/* Particles Background */
+#particles-js {
+    @apply fixed inset-0 -z-10;
+}
+
+/* Interactive Experience Section */
+.canvas-container {
+    @apply relative h-96 rounded-xl overflow-hidden glass-card;
+    min-height: 400px;
+}
+
+#experience-canvas {
+    @apply absolute inset-0 w-full h-full;
+}
+
+/* Navigation */
+.nav-link {
+    @apply text-gray-300 hover:text-white transition-colors;
+}
+
+.nav-button {
+    @apply px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors;
+}
+
+/* Responsive Images */
+.project-image {
+    @apply w-full h-48 object-cover rounded-lg;
+}
+
+/* Animation Classes */
+.fade-in {
+    @apply opacity-0 transition-all duration-1000;
+}
+
+.fade-in.show {
+    @apply opacity-100;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Section Headers */
+.section-title {
+    @apply text-3xl font-bold mb-12 gradient-text text-center;
+}
+
+/* List Styles */
+.feature-list {
+    @apply space-y-2;
+}
+
+.feature-list li {
+    @apply flex items-center space-x-2;
+}
+
+.feature-list li::before {
+    content: "•";
+    @apply text-blue-500;
+}
+
+
+
+/* Update these styles in your main.css */
+
+.canvas-container {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background: rgba(17, 24, 39, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  opacity: 1 !important; /* Force opacity to be 1 */
+}
+
+#experience-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important; /* Force opacity to be 1 */
+}
+
+/* Update fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Exclude canvas container from fade-in */
+.canvas-container.fade-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+
+
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Custom hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+}
+
+/* Ensure Three.js canvas is visible */
+canvas {
+  opacity: 1 !important;
+  display: block !important;
+}

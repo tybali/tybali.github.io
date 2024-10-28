@@ -1,0 +1,15 @@
+{
+  "name": "tybali.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch:css": "tailwindcss -i ./static/css/main.css -o ./css/styles.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^4.5.0"
+  }
+}

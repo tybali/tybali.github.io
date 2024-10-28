@@ -3,200 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tayyab Ali - Software Engineer</title>
+    <title>Tayyab Ali - Full Stack Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+ 
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold text-gray-800">Tayyab Ali</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
-                    <a href="#skills" class="text-gray-600 hover:text-gray-900">Skills</a>
-                    <a href="#experience" class="text-gray-600 hover:text-gray-900">Experience</a>
-                    <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="mobile-menu-button p-2 rounded-md hover:bg-gray-100 focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+<body>
+    <nav class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <div class="text-xl font-bold gradient-text">TA</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#expertise" class="text-gray-300 hover:text-white transition-colors">Expertise</a>
+                <a href="#technologies" class="text-gray-300 hover:text-white transition-colors">Stack</a>
+                <a href="https://www.upwork.com/freelancers/~0183bf0f896b7528ab" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors" target="_blank">Hire Me</a>
             </div>
-        </div>
-        <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-100">About</a>
-            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-100">Skills</a>
-            <a href="#experience" class="block py-2 px-4 text-sm hover:bg-gray-100">Experience</a>
-            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-12 bg-gradient-to-r from-blue-600 to-indigo-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white py-16">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Software Engineer & Data Specialist</h1>
-                <p class="text-xl text-gray-100 mb-8">Building scalable solutions with modern technologies</p>
-                <div class="space-x-4">
-                    <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
-                        Get in Touch
-                    </a>
-                    <a href="#skills" class="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-blue-600 transition-colors">
-                        View Skills
-                    </a>
+    <section class="min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                        Transforming Ideas into <span class="gradient-text">Digital Reality</span>
+                    </h1>
+                    <p class="text-xl mb-8">
+                        Full-Stack Engineer & Software Architect specializing in scalable applications, data engineering, and AI solutions. 7+ years of crafting digital experiences that drive business growth.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors">Start a Project</a>
+                        <a href="https://www.fiverr.com/tybali?up_rollout=true" class="px-8 py-3 rounded-lg border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors" target="_blank">View on Fiverr</a>
+                    </div>
+                    <div class="mt-12 flex items-center gap-8">
+                        <div>
+                            <h4 class="text-2xl font-bold gradient-text">7+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold gradient-text">50+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold gradient-text">100%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-animation hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Tech Illustration" class="rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center fade-in">Interactive Experience</h2>
+            <div class="canvas-container glass-card">
+                <canvas id="experience-canvas"></canvas>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="glass-card p-6 fade-in">
+                    <h3 class="text-xl font-bold mb-4">7+ Years Experience</h3>
+                    <p class="text-gray-400">Crafting scalable solutions and leading development teams</p>
+                </div>
+                <div class="glass-card p-6 fade-in">
+                    <h3 class="text-xl font-bold mb-4">50+ Projects</h3>
+                    <p class="text-gray-400">Successfully delivered across various industries</p>
+                </div>
+                <div class="glass-card p-6 fade-in">
+                    <h3 class="text-xl font-bold mb-4">100% Satisfaction</h3>
+                    <p class="text-gray-400">Committed to exceeding client expectations</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">About Me</h2>
-                <p class="text-gray-600 leading-relaxed mb-8">
-                    With over 7 years of experience in software engineering, I specialize in building data-driven web applications 
-                    and scalable platforms. My expertise spans across full-stack development, data engineering, and AI solutions.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <div class="text-2xl font-bold text-blue-600">7+</div>
-                        <div class="text-gray-600">Years Experience</div>
-                    </div>
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <div class="text-2xl font-bold text-blue-600">50+</div>
-                        <div class="text-gray-600">Projects</div>
-                    </div>
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <div class="text-2xl font-bold text-blue-600">20+</div>
-                        <div class="text-gray-600">Technologies</div>
-                    </div>
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <div class="text-2xl font-bold text-blue-600">100%</div>
-                        <div class="text-gray-600">Satisfaction</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Technical Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Frontend -->
-                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-gray-800">Frontend Development</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            React.js & Next.js
+    <section id="expertise" class="section py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Core Expertise</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Software Architecture -->
+                <div class="glass-card p-6 hover:transform hover:scale-105 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Software Architecture</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Distributed Systems Design & Scalability Patterns</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Angular
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Event-Driven & Microservices Architecture</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Tailwind CSS
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>High-Performance System Optimization</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            TypeScript
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Technical Leadership & Team Mentoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Domain-Driven Design (DDD)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>API Gateway & Service Mesh Implementation</span>
                         </li>
                     </ul>
                 </div>
-
-                <!-- Backend -->
-                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-gray-800">Backend Development</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Node.js
+    
+                <!-- Full-Stack Development -->
+                <div class="glass-card p-6 hover:transform hover:scale-105 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Full-Stack Development</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Modern Frontend Architecture (React, Vue, Next.js)</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Django & FastAPI
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Scalable Backend Systems & Microservices</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Ruby on Rails
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>RESTful & GraphQL API Development</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            RESTful APIs
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Real-time Systems & WebSocket Integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Performance Optimization & SEO</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Responsive & Progressive Web Applications</span>
                         </li>
                     </ul>
                 </div>
-
+    
+                <!-- Cloud & DevOps -->
+                <div class="glass-card p-6 hover:transform hover:scale-105 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Cloud & DevOps</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Multi-Cloud Architecture (AWS, GCP, Azure)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Kubernetes & Container Orchestration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>CI/CD Pipeline Automation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Infrastructure as Code (Terraform, CloudFormation)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Monitoring & Observability (ELK, Prometheus)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Site Reliability Engineering (SRE)</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- AI & Machine Learning -->
+                <div class="glass-card p-6 hover:transform hover:scale-105 transition-all">
+                    <h3 class="text-xl font-bold mb-4">AI & Machine Learning</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Large Language Models & NLP Applications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Computer Vision & Image Processing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>MLOps & Model Deployment Automation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Predictive Analytics & Time Series Analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Deep Learning Model Architecture Design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>AI-Powered Application Development</span>
+                        </li>
+                    </ul>
+                </div>
+    
                 <!-- Data Engineering -->
-                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                        </svg>
-                        <h3 class="text-xl font-semibold text-gray-800">Data Engineering</h3>
-                    </div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Databricks
+                <div class="glass-card p-6 hover:transform hover:scale-105 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Data Engineering</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Big Data Processing & Analytics</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Apache Spark
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>ETL Pipeline Development</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Airflow
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Data Warehouse Architecture</span>
                         </li>
-                        <li class="flex items-center">
-                            <svg class="h-4 w-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Kafka
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Stream Processing & Real-time Analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Data Lake Implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Data Quality & Governance</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Technical Leadership -->
+                <div class="glass-card p-6 hover:transform hover:scale-105 transition-all">
+                    <h3 class="text-xl font-bold mb-4">Technical Leadership</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Team Management & Mentoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Project Planning & Estimation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Agile & Scrum Methodologies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Code Review & Best Practices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Technical Documentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Stakeholder Communication</span>
                         </li>
                     </ul>
                 </div>
@@ -204,6 +277,256 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-16 bg-white">
-        <div
+    <section id="contact" class="section py-20 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Let's Build Something Amazing</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="mailto:tayyabalihere@gmail.com" class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-700/50 transition-colors">
+                    <div class="text-center">
+                        <div class="text-blue-500 text-4xl mb-4">✉️</div>
+                        <h3 class="font-bold mb-2">Email</h3>
+                        <p>tayyabalihere@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/in/tayyab-ali-9615b715a/" class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-700/50 transition-colors" target="_blank">
+                    <div class="text-center">
+                        <div class="text-blue-500 text-4xl mb-4">💼</div>
+                        <h3 class="font-bold mb-2">LinkedIn</h3>
+                        <p>Professional Network</p>
+                    </div>
+                </a>
+
+                <a href="https://www.upwork.com/freelancers/~0183bf0f896b7528ab" class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-700/50 transition-colors" target="_blank">
+                    <div class="text-center">
+                        <div class="text-blue-500 text-4xl mb-4">💻</div>
+                        <h3 class="font-bold mb-2">Upwork</h3>
+                        <p>Hire on Upwork</p>
+                    </div>
+                </a>
+
+                <a href="https://www.fiverr.com/tybali?up_rollout=true" class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-700/50 transition-colors" target="_blank">
+                    <div class="text-center">
+                        <div class="text-blue-500 text-4xl mb-4">🚀</div>
+                        <h3 class="font-bold mb-2">Fiverr</h3>
+                        <p>Hire on Fiverr</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Technology Stack</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Nuxt.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Material UI</span>
+                        <span class="tech-tag">Redux</span>
+                        <span class="tech-tag">Vuex</span>
+                        <span class="tech-tag">SCSS/SASS</span>
+                        <span class="tech-tag">Webpack</span>
+                        <span class="tech-tag">Vite</span>
+                    </div>
+                </div>
+    
+                <!-- Backend -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">NestJS</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">gRPC</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Spring Boot</span>
+                    </div>
+                </div>
+    
+                <!-- Cloud & DevOps -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Cloud & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Jenkins</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                        <span class="tech-tag">GitLab CI</span>
+                        <span class="tech-tag">ArgoCD</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">ELK Stack</span>
+                    </div>
+                </div>
+    
+                <!-- Data Engineering -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Data Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Apache Spark</span>
+                        <span class="tech-tag">Airflow</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Cassandra</span>
+                        <span class="tech-tag">DynamoDB</span>
+                        <span class="tech-tag">Apache Hive</span>
+                        <span class="tech-tag">dbt</span>
+                    </div>
+                </div>
+    
+                <!-- AI & ML -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">Langchain</span>
+                        <span class="tech-tag">Hugging Face</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">CUDA</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">MLOps</span>
+                    </div>
+                </div>
+    
+                <!-- Testing & Quality -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Testing & Quality</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Jest</span>
+                        <span class="tech-tag">Cypress</span>
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">PyTest</span>
+                        <span class="tech-tag">JUnit</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">k6</span>
+                        <span class="tech-tag">SonarQube</span>
+                        <span class="tech-tag">ESLint</span>
+                        <span class="tech-tag">Prettier</span>
+                        <span class="tech-tag">TestCafe</span>
+                        <span class="tech-tag">Artillery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <section id="projects" class="section py-20 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 gradient-text text-center">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800/50 rounded-xl p-6 hover:transform hover:scale-105 transition-all">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="Analytics Dashboard" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">AI-Powered Analytics Platform</h3>
+                    <p class="mb-4">Built a real-time analytics dashboard using React, Node.js, and TensorFlow, processing 1M+ daily events.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">TensorFlow</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-800/50 rounded-xl p-6 hover:transform hover:scale-105 transition-all">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=500" alt="E-commerce Pipeline" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">E-commerce Data Pipeline</h3>
+                    <p class="mb-4">Developed ETL pipeline processing 10TB+ data using Apache Spark, Airflow, and AWS services.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Apache Spark</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Airflow</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">AWS</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-800/50 rounded-xl p-6 hover:transform hover:scale-105 transition-all">
+                    <img src="https://images.unsplash.com/photo-1558346547-4439467bd1d5?w=500" alt="IoT System" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">IoT Fleet Management</h3>
+                    <p class="mb-4">Created real-time fleet tracking system managing 1000+ IoT devices using MQTT, FastAPI, and TimescaleDB.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">FastAPI</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">TimescaleDB</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">MQTT</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-800/50 rounded-xl p-6 hover:transform hover:scale-105 transition-all">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500" alt="AI Platform" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Machine Learning Platform</h3>
+                    <p class="mb-4">Built an automated ML platform for training and deploying models at scale using Python, Docker, and Kubernetes.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Kubernetes</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-gray-800/50 rounded-xl p-6 hover:transform hover:scale-105 transition-all">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" alt="Cloud Architecture" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Serverless Microservices</h3>
+                    <p class="mb-4">Designed and implemented scalable microservices architecture using AWS Lambda and API Gateway.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">AWS Lambda</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">API Gateway</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Terraform</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-gray-800/50 rounded-xl p-6 hover:transform hover:scale-105 transition-all">
+                    <img src="https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=500" alt="Monitoring Dashboard" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-bold mb-2">DevOps Monitoring Suite</h3>
+                    <p class="mb-4">Created comprehensive monitoring solution using Prometheus, Grafana, and ELK stack.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Prometheus</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">Grafana</span>
+                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-full text-sm">ELK Stack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-8 text-center text-gray-400">
+        <p>© 2024 Tayyab Ali. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/index.js"></script>
+
+</body>
+</html>
