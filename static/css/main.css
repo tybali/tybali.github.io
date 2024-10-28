@@ -253,3 +253,74 @@ canvas {
   opacity: 1 !important;
   display: block !important;
 }
+
+
+/* Add these styles to your main.css */
+
+.glass-card {
+  @apply bg-gray-800/50 backdrop-blur-lg border border-gray-700/50 rounded-xl;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  @apply border-blue-500/30;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+}
+
+.canvas-container {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  width: 100%;
+  background: rgba(17, 24, 39, 0.5);
+  margin-bottom: 2rem;
+}
+
+#experience-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Ensure stats are visible */
+.gradient-text {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation for cards */
+.transform {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure proper spacing */
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+/* Enhance glass effect */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+/* Add glow effect on hover */
+.glass-card:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .canvas-container {
+      height: 40vh;
+      min-height: 300px;
+  }
+  
+  .glass-card {
+      padding: 1.5rem;
+  }
+}
